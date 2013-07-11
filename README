@@ -1,0 +1,36 @@
+ statsd-tg – StatsD traffig generator
+══════════════════════════════════════
+http://octo.it/statsd-tg
+
+About
+━━━━━
+
+  statsd-tg is a traffic generator for StatsD. It generates dummy traffic that
+  can be used to stress-test / benchmark StatsD implementations and possibly
+  perform profiling.
+
+
+Operation
+━━━━━━━━━
+
+  statsd-tg generates a set of dummy counters, timers, gauges and sets. The
+  number of each type of event can be configured using command line switches.
+  It then randomly triggers these events using a PRNG which distributes these
+  events uniformly. This means that if you configure 50 counters, 30 timers,
+  15 gauges and 5 sets, counters should make up aproximately half of the
+  generated traffic, timers 30%, gauges 15% and sets 5%.
+
+
+Licensing terms
+━━━━━━━━━━━━━━━
+
+  statsd-tg is licensed under the “GNU General Public License” (GPL),
+  version 2. The exact licensing terms can be found in the file
+  “COPYING” included in the source distribution of statsd-tg.
+
+
+Author
+━━━━━━
+
+  Florian “octo” Forster <ff at octo.it>
+
