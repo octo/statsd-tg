@@ -74,7 +74,7 @@ static void exit_usage (int exit_status) /* {{{ */
   fprintf ((exit_status == EXIT_FAILURE) ? stderr : stdout,
       PACKAGE_NAME" -- statsd traffic generator\n"
       "\n"
-      "  Usage: statsd-ng [OPTION]\n"
+      "  Usage: statsd-tg [OPTION]\n"
       "\n"
       "  Valid options:\n"
       "    -c <number>    Number of counters to emulate. (Default: %i)\n"
