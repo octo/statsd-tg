@@ -1,4 +1,4 @@
-AC_PREREQ([2.68])
+AC_PREREQ([2.67])
 AC_INIT([statsd-tg], [1.0.0], [ff@octo.it])
 AC_CONFIG_SRCDIR([src/statsd-tg.c])
 AC_CONFIG_HEADERS([src/config.h])
@@ -11,6 +11,7 @@ AC_DEFINE([_XOPEN_SOURCE], [500], [Request XOpen issue 5])
 
 # Checks for programs.
 AC_PROG_CC
+AM_PROG_CC_C_O
 
 # Checks for libraries.
 
