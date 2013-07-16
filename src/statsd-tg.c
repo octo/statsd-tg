@@ -86,6 +86,7 @@ static void exit_usage (int exit_status) /* {{{ */
       "                   (Default: "DEF_NODE")\n"
       "    -D <port>      Destination port of the network packets.\n"
       "                   (Default: "DEF_SERVICE")\n"
+      "    -T <threads>   Number of threads to use to generate load.\n"
       "    -h             Print usage information (this output).\n"
       "\n"
       "Copyright (C) 2013  Florian Forster\n"
@@ -248,7 +249,7 @@ static int read_options (int argc, char **argv) /* {{{ */
   conf_threads_num = (int) sysconf (_SC_NPROCESSORS_ONLN);
 #endif
 
-  while ((opt = getopt (argc, argv, "c:t:g:s:S:d:D:h")) != -1)
+  while ((opt = getopt (argc, argv, "c:t:g:s:S:d:D:T:h")) != -1)
   {
     switch (opt)
     {
