@@ -1,0 +1,81 @@
+=encoding UTF-8
+
+=head1 NAME
+
+statsd-tg - Traffic generator for StatsD.
+
+=head1 SYNOPSIS
+
+statsd-tg B<-c> I<counters_num> B<-t> I<timers_num> B<-g> I<gauges_num>
+B<-s> I<sets_num> B<-S> I<set_size> B<-d> I<dest> B<-D> I<dport> B<-T> I<threads_num>
+
+=head1 DESCRIPTION
+
+B<statsd-tg> generates dummy I<StatsD> network traffic. The names of the
+metrics are pseudo-random, i.e. they should look random but two invokations
+with the same arguments should produce the same set of metrics. The values of
+these metrics and the frequency with which each metric is sent is
+unpredictable, though.
+
+You can use the B<-c>, B<-t>, B<-g> and B<-s> options to control the number of
+counters, timers, gauges and sets to closely match your real traffic.
+
+=head1 ARGUMENTS AND OPTIONS
+
+The following options are understood by I<statsd-tg>. The order of the
+arguments generally doesn't matter, as long as no argument is passed more than
+once.
+
+=over 4
+
+=item B<-c> I<counters_num>
+
+The number of metrics with type I<counter> to simulate. Defaults to B<1000>.
+
+=item B<-t> I<timers_num>
+
+The number of metrics with type I<timer> to simulate. Defaults to B<1000>.
+
+=item B<-g> I<gauges_num>
+
+The number of metrics with type I<gauge> to simulate. Defaults to B<100>.
+
+=item B<-s> I<sets_num>
+
+The number of metrics with type I<set> to simulate. Defaults to B<100>.
+
+=item B<-S> I<set_size>
+
+The number of unique values in each metric of type I<set>. Defaults to B<128>.
+
+=item B<-d> I<dest>
+
+Sets the destination to which to send the generated network traffic. Defaults
+to B<localhost>.
+
+=item B<-D> I<dport>
+
+Sets the destination port or service to which to send the generated network
+traffic. Defaults to I<StatsD's> default port, C<8125>.
+
+=item B<-T> I<threads_num>
+
+Number of threads to start to generate dummy traffic. Defaults to the number of
+online CPUs on your system, if it can be read. Otherwise defaults to a single
+thread.
+
+=item B<-h>
+
+Print usage summary.
+
+=back
+
+=head1 SEE ALSO
+
+L<https://github.com/etsy/statsd/>
+
+=head1 AUTHOR
+
+Florian Forster E<lt>ffE<nbsp>atE<nbsp>octo.itE<gt>
+
+=cut
