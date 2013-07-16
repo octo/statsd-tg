@@ -1,5 +1,5 @@
 AC_PREREQ([2.67])
-AC_INIT([statsd-tg], [1.0.0], [ff@octo.it])
+AC_INIT([statsd-tg], [1.0.1], [ff@octo.it])
 AC_CONFIG_SRCDIR([src/statsd-tg.c])
 AC_CONFIG_HEADERS([src/config.h])
 

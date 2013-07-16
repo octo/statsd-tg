@@ -1,2 +1,7 @@
+2013-07-16, Version 1.0.1
+	* Fix the "-T" command line option and add it to the usage
+	  information.
+	* Added the statsd-tg(1) manual page.
+
 2013-07-12, Version 1.0.0
 	* Initial version.
